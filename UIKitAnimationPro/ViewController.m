@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 50, 50
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50
                                                              )];
     [self.view addSubview:view];
     view.backgroundColor = [UIColor redColor];
@@ -61,11 +61,11 @@
                                                           Duration:1.0];
 
     UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
-//    [seq addAction:scale];
-//    [seq addAction:displace];
-//    [seq addAction:fade];
-//    [seq addAction:rotate];
-//    [seq addAction:rotateTo];
+    [seq addAction:scale];
+    [seq addAction:displace];
+    [seq addAction:fade];
+    [seq addAction:rotate];
+    [seq addAction:rotateTo];
     
     for (int i=0; i<100; i++)
     {
