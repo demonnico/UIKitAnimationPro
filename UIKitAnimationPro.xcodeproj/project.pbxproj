@@ -59,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		642262FE16AD40B9002C60C6 /* UIKitAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				64BAC18F1678614300216076 /* UIKitAnimation.h */,
+				64BAC1901678614300216076 /* UIKitAnimation.m */,
+				64BAC1911678614300216076 /* UIView+UIAnimationCatagory.h */,
+				64BAC1921678614300216076 /* UIView+UIAnimationCatagory.m */,
+			);
+			name = UIKitAnimation;
+			sourceTree = "<group>";
+		};
 		64BAC15D1678613000216076 = {
 			isa = PBXGroup;
 			children = (
@@ -89,15 +100,12 @@
 		64BAC1721678613000216076 /* UIKitAnimationPro */ = {
 			isa = PBXGroup;
 			children = (
+				642262FE16AD40B9002C60C6 /* UIKitAnimation */,
 				64BAC17B1678613000216076 /* AppDelegate.h */,
 				64BAC17C1678613000216076 /* AppDelegate.m */,
 				64BAC1841678613000216076 /* ViewController.h */,
 				64BAC1851678613000216076 /* ViewController.m */,
 				64BAC1871678613000216076 /* ViewController.xib */,
-				64BAC18F1678614300216076 /* UIKitAnimation.h */,
-				64BAC1901678614300216076 /* UIKitAnimation.m */,
-				64BAC1911678614300216076 /* UIView+UIAnimationCatagory.h */,
-				64BAC1921678614300216076 /* UIView+UIAnimationCatagory.m */,
 				64BAC1731678613000216076 /* Supporting Files */,
 			);
 			path = UIKitAnimationPro;
@@ -301,6 +309,7 @@
 				64BAC18E1678613000216076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
