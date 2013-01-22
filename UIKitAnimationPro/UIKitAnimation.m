@@ -132,6 +132,17 @@
 }
 
 @end
+@implementation UICallbackBlock
+
++(UICallbackBlock*)actionWithBlock:(KIT_ANIMATION_BLOCK)blocker
+{
+    UICallbackBlock * animation =[[[UICallbackBlock alloc] init] autorelease];
+    [animation setAnimationType:AnimationCallBack];
+    animation.blocker = blocker;
+    return animation;
+}
+
+@end
 
 @implementation UIAnimationSequence
 
@@ -160,6 +171,10 @@
 -(void)addAction:(id<UIAnimationUnitProtocol>)action
 {
     [actionList addObject:action];
+}
+
+-(void)addCallbackBlock:(KIT_ANIMATION_BLOCK)blocker
+{
 }
 
 -(UIKitAnimation*)getAnimationUnit

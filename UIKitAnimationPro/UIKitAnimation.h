@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^KIT_ANIMATION_BLOCK)(id data);
 
 typedef enum
 {
@@ -19,7 +20,8 @@ typedef enum
     AnimationScaleBy,
     AnimationScaleTo,
     AnimationRotateBy,
-    AnimationRotateTo
+    AnimationRotateTo,
+    AnimationCallBack
 }AnimationElement;
 
 @class UIKitAnimation;
@@ -91,6 +93,11 @@ typedef enum
 +(UIRotateAnimation*)actionByRotate:(CGFloat)angle
                           Duration:(CGFloat)duration;
 
+@end
+
+@interface UICallbackBlock : UIKitAnimation
++(UICallbackBlock*)actionWithBlock:(KIT_ANIMATION_BLOCK)blocker;
+@property (nonatomic,retain)KIT_ANIMATION_BLOCK blocker;
 @end
 
 @interface UIAnimationSequence :UIKitAnimation

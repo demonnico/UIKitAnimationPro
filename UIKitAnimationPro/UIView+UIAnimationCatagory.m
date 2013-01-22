@@ -77,6 +77,15 @@
 //            CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(rotate.angle);
             break;
         }
+        case AnimationCallBack:
+        {
+            UICallbackBlock * callback  = (UICallbackBlock*)animation;
+            callback.blocker(nil);
+            UIAnimationSequence * animationList = (UIAnimationSequence*)action;
+            [animationList removeFirstAction];
+            [self runAction:animationList];
+            return;
+        }
         default:
             break;
     }
