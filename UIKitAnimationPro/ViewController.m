@@ -46,6 +46,11 @@
 //     }];
 
 
+    UICallbackBlock * callback = [UICallbackBlock actionWithBlock:^(id data)
+    {
+        NSLog(@"animation finish");
+    }];
+    
     UIScaleAnimation * scale = [UIScaleAnimation actionByScaleX:2.0
                                                          ScaleY:3.0
                                                        Duration:1];
@@ -62,10 +67,12 @@
 
     UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
     [seq addAction:scale];
+    [seq addAction:callback];
     [seq addAction:displace];
     [seq addAction:fade];
     [seq addAction:rotate];
     [seq addAction:rotateTo];
+    [seq addAction:callback];
     
     for (int i=0; i<100; i++)
     {
