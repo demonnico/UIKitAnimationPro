@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287F1E6F170F2341003E8E10 /* UIKitAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 287F1E6C170F2341003E8E10 /* UIKitAnimation.m */; };
+		287F1E70170F2341003E8E10 /* UIView+UIAnimationCatagory.m in Sources */ = {isa = PBXBuildFile; fileRef = 287F1E6E170F2341003E8E10 /* UIView+UIAnimationCatagory.m */; };
 		64BAC16D1678613000216076 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BAC16C1678613000216076 /* UIKit.framework */; };
 		64BAC16F1678613000216076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BAC16E1678613000216076 /* Foundation.framework */; };
 		64BAC1711678613000216076 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BAC1701678613000216076 /* CoreGraphics.framework */; };
@@ -18,11 +20,13 @@
 		64BAC1831678613000216076 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BAC1821678613000216076 /* Default-568h@2x.png */; };
 		64BAC1861678613000216076 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BAC1851678613000216076 /* ViewController.m */; };
 		64BAC1891678613000216076 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64BAC1871678613000216076 /* ViewController.xib */; };
-		64BAC1931678614300216076 /* UIKitAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BAC1901678614300216076 /* UIKitAnimation.m */; };
-		64BAC1941678614300216076 /* UIView+UIAnimationCatagory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BAC1921678614300216076 /* UIView+UIAnimationCatagory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287F1E6B170F2341003E8E10 /* UIKitAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitAnimation.h; sourceTree = "<group>"; };
+		287F1E6C170F2341003E8E10 /* UIKitAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitAnimation.m; sourceTree = "<group>"; };
+		287F1E6D170F2341003E8E10 /* UIView+UIAnimationCatagory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIAnimationCatagory.h"; sourceTree = "<group>"; };
+		287F1E6E170F2341003E8E10 /* UIView+UIAnimationCatagory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIAnimationCatagory.m"; sourceTree = "<group>"; };
 		64BAC1681678613000216076 /* UIKitAnimationPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitAnimationPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BAC16C1678613000216076 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		64BAC16E1678613000216076 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,10 +43,6 @@
 		64BAC1841678613000216076 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		64BAC1851678613000216076 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		64BAC1881678613000216076 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		64BAC18F1678614300216076 /* UIKitAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitAnimation.h; sourceTree = "<group>"; };
-		64BAC1901678614300216076 /* UIKitAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitAnimation.m; sourceTree = "<group>"; };
-		64BAC1911678614300216076 /* UIView+UIAnimationCatagory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIAnimationCatagory.h"; sourceTree = "<group>"; };
-		64BAC1921678614300216076 /* UIView+UIAnimationCatagory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIAnimationCatagory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		642262FE16AD40B9002C60C6 /* UIKitAnimation */ = {
+		287F1E6A170F2341003E8E10 /* UIKitAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				64BAC18F1678614300216076 /* UIKitAnimation.h */,
-				64BAC1901678614300216076 /* UIKitAnimation.m */,
-				64BAC1911678614300216076 /* UIView+UIAnimationCatagory.h */,
-				64BAC1921678614300216076 /* UIView+UIAnimationCatagory.m */,
+				287F1E6B170F2341003E8E10 /* UIKitAnimation.h */,
+				287F1E6C170F2341003E8E10 /* UIKitAnimation.m */,
+				287F1E6D170F2341003E8E10 /* UIView+UIAnimationCatagory.h */,
+				287F1E6E170F2341003E8E10 /* UIView+UIAnimationCatagory.m */,
 			);
-			name = UIKitAnimation;
+			path = UIKitAnimation;
 			sourceTree = "<group>";
 		};
 		64BAC15D1678613000216076 = {
@@ -100,7 +100,7 @@
 		64BAC1721678613000216076 /* UIKitAnimationPro */ = {
 			isa = PBXGroup;
 			children = (
-				642262FE16AD40B9002C60C6 /* UIKitAnimation */,
+				287F1E6A170F2341003E8E10 /* UIKitAnimation */,
 				64BAC17B1678613000216076 /* AppDelegate.h */,
 				64BAC17C1678613000216076 /* AppDelegate.m */,
 				64BAC1841678613000216076 /* ViewController.h */,
@@ -194,8 +194,8 @@
 				64BAC1791678613000216076 /* main.m in Sources */,
 				64BAC17D1678613000216076 /* AppDelegate.m in Sources */,
 				64BAC1861678613000216076 /* ViewController.m in Sources */,
-				64BAC1931678614300216076 /* UIKitAnimation.m in Sources */,
-				64BAC1941678614300216076 /* UIView+UIAnimationCatagory.m in Sources */,
+				287F1E6F170F2341003E8E10 /* UIKitAnimation.m in Sources */,
+				287F1E70170F2341003E8E10 /* UIView+UIAnimationCatagory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
