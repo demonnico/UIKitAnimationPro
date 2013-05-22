@@ -179,10 +179,6 @@
     [actionList addObject:action];
 }
 
--(void)addCallbackBlock:(KIT_ANIMATION_BLOCK)blocker
-{
-}
-
 -(UIKitAnimation*)getAnimationUnit
 {
     if([actionList count])
