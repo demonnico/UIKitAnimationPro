@@ -1,22 +1,35 @@
+#Why use it
+
+* it helps you create a sequnce of animaions like the way in cocos2d.
+
 #How To Use
-------
-*	让你像在cocos2d中一样，对UIView进行动画操作.
 
 ```
-------
+UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+[self.view addSubview:view];
+view.backgroundColor = [UIColor redColor];
+[view release];
 
-UIScaleAnimation  		*scale//缩放动画
-UIDisplaceAnimation		*displacement//位移动画
-UIFadeAnimation  		*fade//淡入、淡出动画    
-UIRotateAnimation 		*rotate//旋转动画
-UIAnimationSequence		*sequnce//动画队列
-UICallbackBlock			*callback//动画异步回调
+UICallbackBlock * callback = [UICallbackBlock actionWithBlock:^(id data)
+{
+    NSLog(@"animation finish");
+}];
 
-------
-example:
-UIView * view;
-UIAnimationSequence * seq;
+UIScaleAnimation * scale = [UIScaleAnimation actionByScaleX:2.0
+                                                     ScaleY:3.0
+                                                   Duration:1];
+UIDisplaceAnimation * displace = [UIDisplaceAnimation actionByPoint:CGPointMake(200, 200)
+                                                           Duration:1.0];
+UIFadeAnimation * fade = [UIFadeAnimation actionByAlpha:-0.5
+                                               Duration:1.0];
 
+UIRotateAnimation * rotate = [UIRotateAnimation actionByRotate:45
+                                                      Duration:1.0];
+
+UIRotateAnimation * rotateTo = [UIRotateAnimation actionToRotate:15
+                                                      Duration:1.0];
+
+UIAnimationSequence * seq = [[][UIAnimationSequence alloc] init] autorelease];
 [seq addAction:scale];
 [seq addAction:callback];
 [seq addAction:displace];
@@ -25,6 +38,8 @@ UIAnimationSequence * seq;
 [seq addAction:rotateTo];
 [seq addAction:callback];
 
+//of course,if you just only one animation, you just need
+//[view runAction:scale] or [view runAction:displace];
 [view runAction:seq];
 
 ```
