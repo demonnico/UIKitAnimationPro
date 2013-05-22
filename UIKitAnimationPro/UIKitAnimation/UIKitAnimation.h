@@ -97,7 +97,7 @@ typedef enum
 
 @interface UICallbackBlock : UIKitAnimation
 +(UICallbackBlock*)actionWithBlock:(KIT_ANIMATION_BLOCK)blocker;
-@property (nonatomic,retain)KIT_ANIMATION_BLOCK blocker;
+@property (nonatomic,copy)KIT_ANIMATION_BLOCK blocker;
 @end
 
 @interface UIAnimationSequence :UIKitAnimation
