@@ -142,6 +142,12 @@
     return animation;
 }
 
+- (void)dealloc
+{
+    Block_release(_blocker);
+    [super dealloc];
+}
+
 @end
 
 @implementation UIAnimationSequence
