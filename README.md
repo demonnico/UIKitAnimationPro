@@ -1,6 +1,6 @@
 #Why use it
 
-* it helps you create a sequnce of animaions like the way in cocos2d.
+* it helps you create a sequnce of animaions like the way in cocos2d. (also like Sprite Kit even without iOS7)
 
 #How To Use
 
