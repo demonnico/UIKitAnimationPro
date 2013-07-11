@@ -101,9 +101,6 @@ typedef enum
 @end
 
 @interface UIAnimationSequence :UIKitAnimation
-{
-    NSMutableArray * actionList;
-}
 
 -(void)removeFirstAction;
 -(void)addAction:(id<UIAnimationUnitProtocol>)action;

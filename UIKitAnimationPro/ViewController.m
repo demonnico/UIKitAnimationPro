@@ -24,7 +24,6 @@
                                                              )];
     [self.view addSubview:view];
     view.backgroundColor = [UIColor redColor];
-    [view release];
     
 ////    view.transform = CGAffineTransformMakeRotation(M_PI_4);
 //    [UIView animateWithDuration:2.0
@@ -84,7 +83,6 @@
         [seq addAction:displace0];
     }
     [view runAction:seq];
-    [seq      release];
 }
 
 - (void)didReceiveMemoryWarning

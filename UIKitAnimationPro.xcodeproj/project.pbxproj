@@ -271,6 +271,7 @@
 		64BAC18D1678613000216076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIKitAnimationPro/UIKitAnimationPro-Prefix.pch";
 				INFOPLIST_FILE = "UIKitAnimationPro/UIKitAnimationPro-Info.plist";
@@ -282,6 +283,7 @@
 		64BAC18E1678613000216076 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIKitAnimationPro/UIKitAnimationPro-Prefix.pch";
 				INFOPLIST_FILE = "UIKitAnimationPro/UIKitAnimationPro-Info.plist";

@@ -40,7 +40,7 @@
 +(UIFadeAnimation*)actionToAlpha:(CGFloat)alpha
                         Duration:(CGFloat)duration
 {
-    UIFadeAnimation * fadeTo = [[[UIFadeAnimation alloc] init] autorelease];
+    UIFadeAnimation * fadeTo = [[UIFadeAnimation alloc] init];
     [fadeTo setAnimationType:AnimationFadeTo];
     [fadeTo setDuration:duration];
     fadeTo.alpha = alpha;
@@ -49,7 +49,7 @@
 +(UIFadeAnimation*)actionByAlpha:(CGFloat)alpha
                         Duration:(CGFloat)duration
 {
-    UIFadeAnimation * fadeBy = [[[UIFadeAnimation alloc] init] autorelease];
+    UIFadeAnimation * fadeBy = [[UIFadeAnimation alloc] init];
     [fadeBy setAnimationType:AnimationFadeBy];
     [fadeBy setDuration:duration];
     fadeBy.alpha = alpha;
@@ -62,7 +62,7 @@
 +(UIDisplaceAnimation*)actionToPoint:(CGPoint)point
                             Duration:(CGFloat)duration
 {
-    UIDisplaceAnimation * animation = [[[UIDisplaceAnimation alloc] init] autorelease];
+    UIDisplaceAnimation * animation = [[UIDisplaceAnimation alloc] init];
     animation.point             = point;
     [animation setAnimationType:AnimationDisplacement];
     [animation setDuration:duration];
@@ -72,7 +72,7 @@
 +(UIDisplaceAnimation*)actionByPoint:(CGPoint)point
                             Duration:(CGFloat)duration
 {
-    UIDisplaceAnimation * animation = [[[UIDisplaceAnimation alloc] init] autorelease];
+    UIDisplaceAnimation * animation = [[UIDisplaceAnimation alloc] init];
     [animation setAnimationType:AnimationDisplacementBy];
     [animation setDuration:duration];
     animation.point             = point;
@@ -87,7 +87,7 @@
                             ScaleY:(CGFloat)scaleY
                           Duration:(CGFloat)duration
 {
-    UIScaleAnimation * animation = [[[UIScaleAnimation alloc] init] autorelease];
+    UIScaleAnimation * animation = [[UIScaleAnimation alloc] init];
     [animation setAnimationType:AnimationScaleTo];
     [animation setDuration:duration];
     animation.scaleX            = scaleX;
@@ -98,7 +98,7 @@
                             ScaleY:(CGFloat)scaleY
                           Duration:(CGFloat)duration;
 {
-    UIScaleAnimation * animation = [[[UIScaleAnimation alloc] init] autorelease];
+    UIScaleAnimation * animation = [[UIScaleAnimation alloc] init];
     [animation setAnimationType:AnimationScaleBy];
     [animation setDuration:duration];
     animation.scaleX            = scaleX;
@@ -113,7 +113,7 @@
 +(UIRotateAnimation*)actionToRotate:(CGFloat)angle
                           Duration:(CGFloat)duration
 {
-    UIRotateAnimation * animation =[[[UIRotateAnimation alloc] init] autorelease];
+    UIRotateAnimation * animation =[[UIRotateAnimation alloc] init];
     [animation setAnimationType:AnimationRotateTo];
     [animation setDuration:duration];
     animation.angle = angle;
@@ -123,7 +123,7 @@
 +(UIRotateAnimation*)actionByRotate:(CGFloat)angle
                           Duration:(CGFloat)duration;
 {
-    UIRotateAnimation * animation =[[[UIRotateAnimation alloc] init] autorelease];
+    UIRotateAnimation * animation =[[UIRotateAnimation alloc] init];
     [animation setAnimationType:AnimationRotateBy];
     [animation setDuration:duration];
     animation.angle = angle;
@@ -136,53 +136,45 @@
 
 +(UICallbackBlock*)actionWithBlock:(KIT_ANIMATION_BLOCK)blocker
 {
-    UICallbackBlock * animation =[[[UICallbackBlock alloc] init] autorelease];
+    UICallbackBlock * animation =[[UICallbackBlock alloc] init];
     [animation setAnimationType:AnimationCallBack];
     animation.blocker = blocker;
     return animation;
 }
 
-- (void)dealloc
-{
-    Block_release(_blocker);
-    [super dealloc];
-}
-
 @end
 
+@interface UIAnimationSequence()
+
+@property(nonatomic,strong) NSMutableArray * actionList;
+
+@end
 @implementation UIAnimationSequence
-
-
-- (void)dealloc
-{
-    [actionList release];
-    [super dealloc];
-}
 
 -(id)init
 {
     if(self=[super init])
     {
-        actionList = [[NSMutableArray alloc] init];
+        self.actionList = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 -(void)removeFirstAction
 {
-    if([actionList count])
-        [actionList removeObjectAtIndex:0];
+    if([_actionList count])
+        [_actionList removeObjectAtIndex:0];
 }
 
 -(void)addAction:(id<UIAnimationUnitProtocol>)action
 {
-    [actionList addObject:action];
+    [_actionList addObject:action];
 }
 
 -(UIKitAnimation*)getAnimationUnit
 {
-    if([actionList count])
-        return [actionList objectAtIndex:0];
+    if([_actionList count])
+        return [_actionList objectAtIndex:0];
     return nil;
 }
 @end
