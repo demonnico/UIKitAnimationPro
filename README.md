@@ -29,7 +29,7 @@ UIRotateAnimation * rotate = [UIRotateAnimation actionByRotate:45
 UIRotateAnimation * rotateTo = [UIRotateAnimation actionToRotate:15
                                                       Duration:1.0];
 
-UIAnimationSequence * seq = [[][UIAnimationSequence alloc] init] autorelease];
+UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 [seq addAction:scale];
 [seq addAction:callback];
 [seq addAction:displace];
