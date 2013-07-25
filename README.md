@@ -1,8 +1,8 @@
-#Why use it
+##why use it
 
 * it helps you create a sequnce of animaions like the way in cocos2d. (also like Sprite Kit even without iOS7)
 
-#How To Use
+##How To Use
 
 ```
 UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
@@ -43,4 +43,12 @@ UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 [view runAction:seq];
 
 ```
+##TODO:
+1、there's a little problem when play a scale animation.(but at most of time is ok.)
 
+##Creator
+[Nicholas Tau](http://www.taofengping.com) ([@demonNico](https://twitter.com/demonnico))
+
+## License
+
+UIKitAnimation is available under the MIT license. See the LICENSE file for more info.
