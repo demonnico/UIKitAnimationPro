@@ -53,20 +53,21 @@
     UIScaleAnimation * scale = [UIScaleAnimation actionByScaleX:2.0
                                                          ScaleY:3.0
                                                        Duration:1];
-    UIDisplaceAnimation * displace = [UIDisplaceAnimation actionByPoint:CGPointMake(200, 200)
-                                                               Duration:1.0];
-    UIFadeAnimation * fade = [UIFadeAnimation actionByAlpha:-0.5
+    UIDisplaceAnimation * displace = [UIDisplaceAnimation actionByPoint:CGPointMake(100, 100)
+                                                               Duration:3.0];
+    UIFadeAnimation * fade = [UIFadeAnimation actionByAlpha:-0.2
                                                    Duration:1.0];
     
-    UIRotateAnimation * rotate = [UIRotateAnimation actionByRotate:45
+    UIRotateAnimation * rotate = [UIRotateAnimation actionByRotate:90
                                                           Duration:1.0];
     
-    UIRotateAnimation * rotateTo = [UIRotateAnimation actionToRotate:15
+    UIRotateAnimation * rotateTo = [UIRotateAnimation actionToRotate:150
                                                           Duration:1.0];
 
     UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
     [seq addAction:scale];
     [seq addAction:callback];
+    
     [seq addAction:displace];
     [seq addAction:fade];
     [seq addAction:rotate];

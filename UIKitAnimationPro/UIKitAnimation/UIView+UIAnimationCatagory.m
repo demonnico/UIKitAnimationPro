@@ -7,7 +7,9 @@
 //
 
 #import "UIView+UIAnimationCatagory.h"
-
+#if !__has_feature(objc_arc)
+#error THIS CODE MUST BE COMPILED WITH ARC ENABLED!
+#endif
 @implementation UIView (UIAnimationCatagory)
 -(void)runAction:(id<UIAnimationUnitProtocol>)action;
 {
@@ -80,7 +82,7 @@
         case AnimationCallBack:
         {
             UICallbackBlock * callback  = (UICallbackBlock*)animation;
-            callback.blocker(nil);
+            callback.blocker(nil);//这里执行了block
             UIAnimationSequence * animationList = (UIAnimationSequence*)action;
             [animationList removeFirstAction];
             [self runAction:animationList];
@@ -101,7 +103,7 @@
             {
                 UIAnimationSequence * animationList = (UIAnimationSequence*)action;
                 [animationList removeFirstAction];
-                [self runAction:animationList];
+                [self runAction:animationList];//通过这里递归了
             }
         }];
 }

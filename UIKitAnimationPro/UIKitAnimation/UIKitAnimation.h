@@ -12,16 +12,17 @@ typedef void(^KIT_ANIMATION_BLOCK)(id data);
 
 typedef enum
 {
-    AnimationNone   =0,
-    AnimationDisplacementBy,
-    AnimationDisplacement,
+    AnimationNone   =0,//无
+    AnimationDisplacementBy,//是位置移动量
+    AnimationDisplacement,//位置移动
     AnimationFadeBy,
     AnimationFadeTo,
     AnimationScaleBy,
     AnimationScaleTo,
     AnimationRotateBy,
     AnimationRotateTo,
-    AnimationCallBack
+    AnimationCallBack//回调block
+    
 }AnimationElement;
 
 @class UIKitAnimation;
@@ -46,17 +47,37 @@ typedef enum
     AnimationElement _animationType;
 }
 @end
-
+/**
+ *	UIFadeAnimation 透明度变化的动画
+ */
 @interface UIFadeAnimation : UIKitAnimation
 
 @property (nonatomic,assign) CGFloat alpha;
-
+/**
+ *	返回alpha变化到某一数值的动画
+ *
+ *	@param	alpha	要变化到的alpha
+ *	@param	duration	动画的时间
+ *
+ *	@return	返回UIFadeAnimation
+ */
 +(UIFadeAnimation*)actionToAlpha:(CGFloat)alpha
                         Duration:(CGFloat)duration;
+/**
+ *	返回alpha变化量为某一数值的动画
+ *
+ *	@param	alpha	alpha的变化量，可以是正负值
+ *	@param	duration	动画的时间
+ *
+ *	@return	返回UIFadeAnimation
+ */
 +(UIFadeAnimation*)actionByAlpha:(CGFloat)alpha
                         Duration:(CGFloat)duration;
 @end
 
+/**
+ *	UIDisplaceAnimation 位置移动
+ */
 @interface UIDisplaceAnimation : UIKitAnimation
 
 @property (nonatomic,assign) CGPoint point;
@@ -67,6 +88,9 @@ typedef enum
                             Duration:(CGFloat)duration;
 @end
 
+/**
+ *	UIScaleAnimation 缩放动画
+ */
 @interface UIScaleAnimation : UIKitAnimation
 
 @property (nonatomic,assign) CGFloat scaleX;
@@ -80,10 +104,13 @@ typedef enum
                           Duration:(CGFloat)duration;
 @end
 
+/**
+ *	UIRotateAnimation 旋转动画
+ */
 @interface UIRotateAnimation : UIKitAnimation
 
 /**
- *	@brief	角度值
+ *	@brief	角度值 就是 不是M_PI,是180，不是弧度。
  */
 @property (nonatomic,assign) CGFloat angle;
 
@@ -95,11 +122,17 @@ typedef enum
 
 @end
 
+/**
+ *	UICallbackBlock 传入动画回调block
+ */
 @interface UICallbackBlock : UIKitAnimation
 +(UICallbackBlock*)actionWithBlock:(KIT_ANIMATION_BLOCK)blocker;
 @property (nonatomic,copy)KIT_ANIMATION_BLOCK blocker;
 @end
 
+/**
+ *	UIAnimationSequence 动画队列，添加动作到队列中，然后view执行队列，显示动画
+ */
 @interface UIAnimationSequence :UIKitAnimation
 
 -(void)removeFirstAction;
