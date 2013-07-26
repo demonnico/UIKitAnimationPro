@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIKitAnimation.h"
+/**
+ *	给view添加了执行动画的方法。
+ */
 @interface UIView (UIAnimationCatagory)
 -(void)runAction:(id<UIAnimationUnitProtocol>)action;
 @end
