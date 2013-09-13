@@ -1,6 +1,6 @@
-##why use it
+##Why Use It
 
-* it helps you create a sequnce of animaions like the way in cocos2d. (also like Sprite Kit even without iOS7)
+* It helps you create a sequnce of animaions like the way in cocos2d. (also like Sprite Kit even without iOS7)
 
 ##How To Use
 
@@ -44,7 +44,7 @@ UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 
 ```
 ##TODO:
-1、there's a little problem when play a scale animation.(but at most of time is ok.)
+1、There's a little problem when play a scale animation.(but at most of time is ok.)
 
 ##Creator
 [Nicholas Tau](http://www.taofengping.com) ([@demonNico](https://twitter.com/demonnico))
