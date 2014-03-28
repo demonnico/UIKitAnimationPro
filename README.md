@@ -52,3 +52,7 @@ UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 ## License
 
 UIKitAnimation is available under the MIT license. See the LICENSE file for more info.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/demon1105/uikitanimationpro/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
