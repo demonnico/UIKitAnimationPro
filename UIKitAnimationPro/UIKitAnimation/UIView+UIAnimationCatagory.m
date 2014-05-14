@@ -70,13 +70,11 @@
             transform  = rotatedTransform;
             break;
         }
-            //TODO
         case AnimationRotateTo:
         {
             UIRotateAnimation * rotate =(UIRotateAnimation*)animation;
             CGFloat radians = rotate.angle*M_PI/180;
             transform = CGAffineTransformMakeRotation(radians);
-//            CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(rotate.angle);
             break;
         }
         case AnimationCallBack:
