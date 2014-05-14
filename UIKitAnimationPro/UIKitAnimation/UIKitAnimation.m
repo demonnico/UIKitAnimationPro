@@ -147,10 +147,9 @@
 @end
 
 @interface UIAnimationSequence()
-
 @property(nonatomic,strong) NSMutableArray * actionList;
-
 @end
+
 @implementation UIAnimationSequence
 
 -(id)init
