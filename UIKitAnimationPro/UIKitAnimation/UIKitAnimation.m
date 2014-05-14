@@ -176,7 +176,7 @@
 -(UIKitAnimation*)getAnimationUnit
 {
     if([_actionList count])
-        return [_actionList objectAtIndex:0];
+        return [_actionList firstObject];
     return nil;
 }
 @end
