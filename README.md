@@ -43,8 +43,6 @@ UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 [view runAction:seq];
 
 ```
-##TODO:
-1、There's a little problem when play a scale animation.(but at most of time is ok.)
 
 ##Creator
 [Nicholas Tau](http://www.taofengping.com) ([@demonNico](https://twitter.com/demonnico))
