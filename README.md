@@ -1,8 +1,8 @@
-##Why Use It
+## Why Use It
 
 * It helps you create a sequnce of animaions like the way in cocos2d. (also like Sprite Kit even without iOS7)
 
-##How To Use
+## How To Use
 
 ```
 UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
@@ -44,8 +44,8 @@ UIAnimationSequence * seq = [[UIAnimationSequence alloc] init];
 
 ```
 
-##Creator
-[Nicholas Tau](http://www.taofengping.com) ([@demonNico](https://twitter.com/demonnico))
+## Creator
+[Nicholas Tau](http://blog.inico.me)
 
 ## License
 
